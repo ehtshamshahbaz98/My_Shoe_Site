@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+section {
+    padding: 7em 0;
+}
+
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1.25em;
+    /* background: var(--clr-accent, orange);*/
+    background: radial-gradient(#52ff34, rgb(32, 194, 0));
+
+    color: var(--clr-text, black);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: .25rem;
+    transition: transform 250ms ease-in-out,
+    opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.primary-title {
+    font-size: 4rem;
+    font-size: clamp(3rem, calc(5vw + 1rem, 4.5rem));
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #17353d;
+    margin-bottom: 5rem;
+}
+
+header {
+    line-height: 2;
+}
+
+.hero {
+    color: #eee;
+    text-align: center;
+    padding: 20em 0;
+    background-image: url('./images/shoe-head.png'),
+    radial-gradient(#444, #333);
+    background-blend-mode: multiply;
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.featured { 
+    background-color: #eee;
+}
+
+.featured__item {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+}
+
+span {
+    display: block;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.product {
+    background: radial-gradient(rgb(73, 73, 73), rgb(44, 47, 56));
+    padding: 3em;
+    border-radius: 1em;
+    margin-bottom: 3em;
+    color: #eee;
+    text-align: center;
+}
+
+.product__title {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+@media (min-width: 45em) {
+    .split {
+        display: flex;
+        justify-content: center;
+    }
+    .featured__item {
+        display: block;
+        position: relative;
+        transform: scale(.85);
+        transition: transform 250ms ease-in-out;
+    }
+    .featured__item:hover,
+    .featured__item:focus {
+        transform: scale(1);
+    }
+    .product {
+        text-align: left;
+    }
+    .product__title {
+        margin: 0;
+    }
+    .product__img{
+        float: right;
+        width: 50%;
+        shape-outside: url(./images/shoe4.png);
+        margin: 0 -5em 0 0;
+    }
+}
+
+@media (min-width: 1050px) {
+    .product {
+        padding: 7em;
+    }
+    .hero {
+        padding: 30em 0;
+    }
+}
